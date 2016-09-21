@@ -1,0 +1,73 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    font-size: 100%
+}
+
+body {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    font-family: 'Open Sans';
+    color: black;
+    min-height: 100%;
+}
+
+.navbar {
+    position: absolute;
+    display: inline-block;
+    float: left;
+    left: 0px; 
+    top: 0px; 
+    bottom: 0px;
+    padding: 0.5rem;
+    background-color: rgba(141,170,196,0.97);
+    width: 25%;
+    min-width: 238px;
+    max-width: 300px;
+    z-index: -1;
+    
+}
+
+.navbar .logo .pic{
+    position: absolute;
+    display: inline-block;
+    left: 0px;
+    top: -1px;
+    height: 175px;
+    width: 101%;
+    min-width: 238px;
+    max-width: 300px;
+    z-index: +1;
+}
+
+.table-content .table-title .table-title-heading {
+    position: relative;
+    top: 200px;
+    left: 2rem;
+    font: Times new Roman;
+    font-weight: 800;
+    color: black;
+}
+
+.table-content .room-table {
+    position: relative;
+    top: 205px;
+    left: 2rem;
+    height: 5rem;
+}
+
+.table-content .room-table .room-table-rows .room-table-cell {
+    font: serif;
+    font-weight: 400;
+    color: firebrick;
+    font-style: italic;
+    font-size: 21px;
+    
+}
