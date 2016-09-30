@@ -1,0 +1,18 @@
+<section class="table-content">
+   <div>
+       <a class="table-title">
+            <h1 class="table-title-heading">Rooms</h1>
+            <button class="new-room-button" ng-click="home.open()">New Room</button>
+       </a>
+   </div>
+   <div>
+        <table class="room-table">
+            <tr class="room-table-rows" ng-repeat="room in home.rooms">
+                <td>
+                    <a class="room-table-cell">{{ room.name }}
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>

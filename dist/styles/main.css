@@ -3,6 +3,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 html {
     height: 100%;
     font-size: 100%
@@ -54,6 +55,12 @@ body {
     font: Times new Roman;
     font-weight: 800;
     color: black;
+}
+
+.table-content .table-title .new-room-button {
+    position: relative;
+    top: 120px;
+    left: 2rem;
 }
 
 .table-content .room-table {

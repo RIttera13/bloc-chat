@@ -1,0 +1,23 @@
+.app-modal-window {
+    height: 300px;
+    width: 200px;
+}
+
+.modal-form-text {
+    position: fixed;
+    left: 33%;
+    width: 200px;
+    top: 10%;
+}
+
+.app-modal-window .submit-btn-default {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+}
+
+.app-modal-window .cancel-btn-default {
+    position: absolute;
+    top: 25%;
+    left: 56%;
+}

@@ -1,0 +1,7 @@
+<form name="new-room-form" ng-submit="submitForm()" novalidate>
+    <div class='app-modal-window'>
+        <input type="text" name="new-room-name" class="modal-form-text" ng-model="newRoom.name" required>
+        <button  type="submit" ng-click="createRoom()" class="submit-btn-default">Add Room</button>
+        <button class="cancel-btn-default" ng-click="cancel()">Cancel</button>
+    </div>
+</form>
