@@ -65,7 +65,7 @@ body {
 
 .table-content .room-table {
     position: relative;
-    top: 205px;
+    top: 165px;
     left: 2rem;
     height: 5rem;
 }
@@ -77,4 +77,19 @@ body {
     font-style: italic;
     font-size: 21px;
     
+}
+
+.table-content .chat-heading {
+    position: absolute;
+    top: 200px;
+    left: 350px;
+    color: black;
+}
+
+.table-content .chat-messages {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 600px;
+    color: black;
 }

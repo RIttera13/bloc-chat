@@ -2,17 +2,24 @@
   function Room($firebaseArray) {
     var Room = {};
    
-    var ref = firebase.database().ref().child("rooms");
-    var rooms = $firebaseArray(ref);
+    var ref = firebase.database().ref();
+    var rooms = $firebaseArray(ref.child("rooms"));
+    var messages = $firebaseArray(ref.child('messages'));
     
-    //Public Methods
-    Room.all = rooms;
-      
-    Room.add = function(room){
-        rooms.$add(room);
-    };   
-      
-    return Room;
+    return {
+            all: rooms,
+            addRoom: function (anything) {
+                rooms.$add({
+                    $value: anything
+                })
+            },
+            getMessages: function (roomId) {
+                return $firebaseArray(ref.child('messages').orderByChild('roomId').equalTo(roomId))
+            },
+            getRooms: function (roomId) {
+                return $firebaseArray(ref.child('rooms').orderByChild('$id').equalTo(roomId));
+            }
+        }
   }
 
   angular

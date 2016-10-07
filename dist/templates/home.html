@@ -9,10 +9,16 @@
         <table class="room-table">
             <tr class="room-table-rows" ng-repeat="room in home.rooms">
                 <td>
-                    <a class="room-table-cell">{{ room.name }}
+                    <a ng-click="home.getRoom(room)" class="room-table-cell">{{ room.name }}
                     </a>
                 </td>
             </tr>
         </table>
+    </div>
+    <div class="chat-heading">
+        <h3>{{ home.currentRoom.name }}</h3>
+        <p class="chat-messages" ng-repeat="message in home.messages">
+            <strong> {{ message.username }} ({{ message.sentAt }}):</strong> {{ message.content }}
+        </p>
     </div>
 </section>
