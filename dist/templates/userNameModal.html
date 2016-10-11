@@ -1,0 +1,7 @@
+<form name="usernameForm" ng-submit="submitForm()" validate>
+    <div class='username-window'>
+        <label>Enter a Username:</label>
+        <input type="text" name="new-username" class="username-form-text" ng-model="username" ng-required='true'>
+        <button  type="submit" ng-click="createUsername()" class="username-submit" ng-disabled="username == null ">Set Username</button>
+    </div>
+</form>

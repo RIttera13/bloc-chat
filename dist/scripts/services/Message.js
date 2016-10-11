@@ -1,17 +1,21 @@
 (function() {
-  function Message($firebaseArray) {
-    var ref = firebase.database().ref();
-    var messages = $firebaseArray(ref.child('messages'));
+  function Message($firebaseArray, $cookies) {
+    var ref = firebase.database().ref().child("messages");
+    var messages = $firebaseArray(ref);
 
     return {
-      send: function(newMessage) {
-       messages.$add(newMessage)
-       console.log(messages);
-      }
-    };
+      send: function(newMessage, roomId) {
+        var message = {
+					username: $cookies.get('blocChatCurrentUser'),
+					content: newMessage,
+					sentAt: firebase.database.ServerValue.TIMESTAMP,
+					roomId: roomId
+				}
+                messages.$add(message);
+        }
+      };
   }
-
   angular
     .module('blocChat')
-    .factory('Message', ['$firebaseArray', Message]);
+    .factory('Message', ['$firebaseArray', '$cookies', Message]);
 })();

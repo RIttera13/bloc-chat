@@ -18,7 +18,13 @@
     <div class="chat-heading">
         <h3>{{ home.currentRoom.name }}</h3>
         <p class="chat-messages" ng-repeat="message in home.messages">
-            <strong> {{ message.username }} ({{ message.sentAt }}):</strong> {{ message.content }}
+            <strong> {{ message.username }} ({{ message.sentAt | date : 'h:mm' }}):</strong> {{ message.content }}
         </p>
     </div>
+    <form class="message-form" ng-submit="home.sendMessage(newMessage)">
+		<div class="new-message">
+			<input type="text" class="new-message-box" ng-model="newMessage">
+		</div>
+		<button class="new-message-button" type="button" ng-click="home.sendMessage(newMessage)">Send</button>
+	</form>
 </section>

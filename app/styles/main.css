@@ -93,3 +93,20 @@ body {
     width: 600px;
     color: black;
 }
+
+.new-message {
+    position: absolute;
+    bottom: 100px;
+}
+
+.new-message .new-message-box {
+    position: absolute;
+    left: 300px;
+    width: 483px;
+}
+
+.message-form .new-message-button {
+    position: absolute;
+    bottom: 74px;
+    left: 800px;
+}
