@@ -48,7 +48,41 @@ body {
     z-index: +1;
 }
 
-.table-content .table-title .table-title-heading {
+.table-content {
+    float: left;
+    width: 29%;
+}
+
+.table-content .welcome {
+    position: absolute;
+    float: right;
+    top: 200px;
+    font: Times new Roman;
+    font-weight: 800;
+    color: black;
+}
+
+.table-content .welcome .welcome-title {
+    position: absolute;
+    left: 36rem;
+    width: 325px;
+    top: 60px;
+    font: Times new Roman;
+    font-weight: 800;
+    color: black;
+}
+
+.table-content .welcome .welcome-message {
+    position: absolute;
+    top: 129px;
+    left: 34.5rem;
+    width: 373px;
+    font: Times new Roman;
+    font-weight: 800;
+    color: black;
+}
+
+.table-content .table-title-heading {
     position: relative;
     top: 200px;
     left: 2rem;
@@ -75,38 +109,72 @@ body {
     font-weight: 400;
     color: firebrick;
     font-style: italic;
-    font-size: 21px;
-    
+    font-size: 21px;   
+}
+
+.table-content .room-table .room-table-rows .room-table-cell:active {
+    background-color: aqua;  
+}
+
+aside {
+    float: right;
+    width:71%;
+    bottom: 50px;
 }
 
 .table-content .chat-heading {
     position: absolute;
-    top: 200px;
+    top: 152px;
     left: 350px;
     color: black;
 }
 
-.table-content .chat-messages {
-    position: absolute;
-    top: 100px;
+.table-content .message-table {
+    position: relative;
+    display: block;
+    top: 40px;
+    max-height: 400px;
+    left: 350px;
+    width: 600px;
+    color: black;
+    overflow-y: scroll;
+}
+
+.table-content .message-table .message-list .chat-messages {
+    position: relative;
+    top: 0px;
     left: 0px;
     width: 600px;
     color: black;
 }
 
+.table-content .message-table .message-list .time {
+    position: relative;
+    top: 0px;
+    left: 330%;
+    width: 600px;
+    color: rgba(204, 203, 202, 0.6);  
+}
+    
 .new-message {
     position: absolute;
-    bottom: 100px;
+    bottom: 67px;
 }
 
 .new-message .new-message-box {
     position: absolute;
-    left: 300px;
-    width: 483px;
+    left: 302px;
+    width: 635px;
+    height: 48px;
+    background-color: rgba(204, 204, 204, 0.4);
 }
 
 .message-form .new-message-button {
     position: absolute;
-    bottom: 74px;
-    left: 800px;
+    left: 939px;
+    width: 86px;
+    height: 48px;
+    bottom: 19px;
+    background-color: rgba(119,136,153, 0.5);
+    color: blue;  
 }

@@ -1,7 +1,7 @@
 <section class="table-content">
    <div>
+       <h1 class="table-title-heading">Rooms</h1>
        <a class="table-title">
-            <h1 class="table-title-heading">Rooms</h1>
             <button class="new-room-button" ng-click="home.open()">New Room</button>
        </a>
    </div>
@@ -15,13 +15,31 @@
             </tr>
         </table>
     </div>
-    <div class="chat-heading">
-        <h3>{{ home.currentRoom.name }}</h3>
-        <p class="chat-messages" ng-repeat="message in home.messages">
-            <strong> {{ message.username }} ({{ message.sentAt | date : 'h:mm' }}):</strong> {{ message.content }}
-        </p>
+    <div>
+        <h3 class="chat-heading">{{ home.currentRoom.name }}</h3>
+        <div style="overflow-x"></div>
+        <table class="message-table">
+            <tr class='message-list' ng-repeat="message in home.messages">
+                <td>
+                    <a class="chat-messages">
+                    <strong> {{ message.username }}:</strong>
+                    <a class="time">    {{ message.sentAt | date : 'h:mm a' }} </a>
+                    <br>
+                    <a class="content"> {{ message.content }} </a>
+                    <br>
+                    <br>
+                    </a>
+                </td>
+            </tr>
+        </table>    
     </div>
-    <form class="message-form" ng-submit="home.sendMessage(newMessage)">
+    <div class="welcome" ng-hide="home.inRoom">
+        <H1 class="welcome-title">Welcome to Bloc Chat</H1>
+        <br>
+        <br>
+        <h3 class="welcome-message">Please select a room to begin.</h3>
+    </div>
+    <form ng-show="home.inRoom" name="newMessageForm" class="message-form" ng-submit="home.sendMessage(newMessage)">
 		<div class="new-message">
 			<input type="text" class="new-message-box" ng-model="newMessage">
 		</div>
