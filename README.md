@@ -1,5 +1,7 @@
 ## Bloc Frontend Project Starter
 
+- BlocChat is a basic realtime chat app that allows users to create a username and room. This uses firebase to act as the realtime database to track the rooms, users, and submitted chats. This allows a submitted chat to populate in the user view of anyone in that room as soon as it is submitted.
+
 A starter application for student projects in Bloc's [Frontend Web Development Course](https://www.bloc.io/frontend-development-bootcamp).
 
 ## Configuration
